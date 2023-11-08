@@ -1,0 +1,211 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Rock Salt', cursive;
+}
+
+/* Styles pour la navigation dans le header */
+header{
+    background-color: #ff0000; /* Rouge AC/DC */
+    padding: 10px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header h1 {
+    font-size: 28px;
+    margin: 0;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #333; /* Fond sombre */
+    border: 1px solid #777;
+}
+
+h1 {
+    text-align: center; /* Centrage du texte du nom du groupe horizontalement */
+    font-size: 24px; /* Taille du texte du nom du groupe */
+}
+
+h1, h2, h3, h4 {
+    color: #ff0000; /* Rouge AC/DC */
+}
+
+article {
+    margin: 20px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: #ff0000; /* Rouge AC/DC */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Styles pour la navigation dans le footer */
+footer {
+    background-color: #ff0000; /* rouge AC/DC */
+    text-align: center;
+    padding: 10px;
+    color: black;
+}
+
+footer nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+#groupe-image {
+    text-align: center; /* Centrage de l'image horizontalement */
+    margin: 20px 0; /* Espacement supérieur et inférieur */
+}
+
+#groupe-image img {
+    max-width: 30%; /*Ajustement de la largeur de l'image en fonction de la largeur de la div parent */
+    height: auto; /* Maintien des proportions de l'image */
+    border: 1px solid #ccc; /* Ajout d'une bordure autour de l'image */
+    border-radius: 10px; /* Ajout des coins arrondis à l'image */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Ajout d'une ombre à l'image */
+}
+
+p {
+    font-family: 'RocknRoll One', sans-serif;
+}
+
+.listes {
+    font-family: 'RocknRoll One', sans-serif;
+}
+
+.media-galerie {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacement entre les images et vidéos */
+}
+
+.media-galerie img,
+.media-galerie video {
+    max-width: 100%; /* Ajustement de la largeur des médias en fonction de la largeur parente */
+    height: auto; /* Maintient des proportions de l'image/vidéo */
+    border: 1px solid #ccc; /* Ajout d'une bordure autour des images/vidéos */
+    border-radius: 5px; /* Ajout des coins arrondis */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Style pour les logos des réseaux sociaux */
+.social-liens img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px; /* Ajout d'un espace à droite des logos pour les séparer du texte */
+    font-family: 'Rock Salt', cursive;
+}
+
+/* Style pour les liens vers les réseaux sociaux */
+.social-liens a {
+    text-decoration: none; /* Supprime le soulignage des liens */
+    color: #ccc; /* Couleur du texte du lien */
+    font-weight: bold; /* Texte en gras */
+}
+
+/* Style pour les liens au survol */
+.social-liens a:hover {
+    color: #ff0000; /* Couleur du texte au survol */
+}
+
+/* Formulaire de contact */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+form label, form input, form textarea {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.text-form {
+    color: black;
+    font-family: 'RocknRoll One', sans-serif;
+}
+
+#gif {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#berock {
+    font-family: 'Rock Salt', cursive;
+    color: #ff0000;
+}
+
+img {
+    object-fit:cover;
+}
+
+#confirmation {
+    font-family: 'Rock Salt', cursive;
+    color: #fff;
+}
+
+.submit {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: 'RocknRoll One', sans-serif;
+}
+
+.submit a:hover {
+    background-color: black;
+}
