@@ -1,7 +1,11 @@
+/* Styles de base */
 body {
     background-color: black;
     color: white;
     font-family: 'Rock Salt', cursive;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
 
 /* Styles pour la navigation dans le header */
@@ -9,6 +13,10 @@ header{
     background-color: #ff0000; /* Rouge AC/DC */
     padding: 10px;
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 header nav ul {
@@ -55,6 +63,7 @@ article {
 img {
     max-width: 100%;
     height: auto;
+    object-fit:cover;
 }
 
 a {
@@ -119,6 +128,7 @@ p {
     display: flex;
     flex-wrap: wrap;
     gap: 20px; /* Espacement entre les images et vidéos */
+    justify-content: center;
 }
 
 .media-galerie img,
@@ -128,6 +138,13 @@ p {
     border: 1px solid #ccc; /* Ajout d'une bordure autour des images/vidéos */
     border-radius: 5px; /* Ajout des coins arrondis */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.media-galerie img:hover,
+.media-galerie video:hover {
+    transform: scale(1.05);
+    border-color: #ff0000;
 }
 
 /* Style pour les logos des réseaux sociaux */
@@ -208,4 +225,44 @@ img {
 
 .submit a:hover {
     background-color: black;
+}
+
+/* Styles responsives */
+@media screen and (max-width: 768px) {
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    #groupe-image img {
+        max-width: 80%;
+    }
+    
+    .media-galerie {
+        gap: 10px;
+    }
+    
+    .media-galerie img,
+    .media-galerie video {
+        width: 100%;
+    }
+    
+    form {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+    
+    h2 {
+        font-size: 18px;
+    }
+    
+    section {
+        margin: 10px;
+        padding: 10px;
+    }
 }
