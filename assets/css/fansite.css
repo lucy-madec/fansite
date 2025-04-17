@@ -1,22 +1,28 @@
 /* Styles de base */
 body {
-    background-color: black;
+    background-color: #121212;
     color: white;
     font-family: 'Rock Salt', cursive;
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url('../images/Groupe acdc.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* Styles pour la navigation dans le header */
-header{
-    background-color: #ff0000; /* Rouge AC/DC */
-    padding: 10px;
+header {
+    background-color: rgba(204, 0, 0, 0.95); /* Rouge AC/DC avec transparence */
+    padding: 15px;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+    border-bottom: 2px solid #ff0000;
 }
 
 header nav ul {
@@ -26,13 +32,29 @@ header nav ul {
 }
 
 header nav ul li {
-    display: inline;
-    margin-right: 20px;
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+header nav ul li:hover {
+    transform: scale(1.1);
 }
 
 header a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+header a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 0 0 5px #fff;
 }
 
 header h1 {
@@ -41,19 +63,32 @@ header h1 {
 }
 
 section {
-    margin: 20px;
-    padding: 20px;
-    background-color: #333; /* Fond sombre */
+    margin: 30px auto;
+    padding: 25px;
+    background-color: rgba(30, 30, 30, 0.85); /* Fond sombre avec transparence */
     border: 1px solid #777;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    max-width: 1200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    box-shadow: 0 8px 25px rgba(255, 0, 0, 0.3);
 }
 
 h1 {
     text-align: center; /* Centrage du texte du nom du groupe horizontalement */
-    font-size: 24px; /* Taille du texte du nom du groupe */
+    font-size: 32px; /* Taille du texte du nom du groupe */
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+    letter-spacing: 2px;
+    margin-bottom: 20px;
 }
 
 h1, h2, h3, h4 {
     color: #ff0000; /* Rouge AC/DC */
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 article {
@@ -75,32 +110,87 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Styles pour la navigation dans le footer */
+/* Styles pour le footer */
 footer {
-    background-color: #ff0000; /* rouge AC/DC */
-    text-align: center;
-    padding: 10px;
-    color: black;
+    background-color: rgba(204, 0, 0, 0.95); /* rouge AC/DC avec transparence */
+    color: white;
+    margin-top: 50px;
+    border-top: 3px solid #ff0000;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-nav {
+    flex: 1;
+    min-width: 300px;
+    margin-bottom: 20px;
+}
+
+.footer-nav h3 {
+    color: white;
+    margin-top: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 10px;
 }
 
 footer nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    columns: 2;
 }
 
 footer nav ul li {
-    display: inline;
-    margin-right: 20px;
+    margin-bottom: 10px;
 }
 
 footer a {
-    color: black;
+    color: white;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 footer a:hover {
-    text-decoration: underline;
+    color: #ffcc00;
+    text-decoration: none;
+    text-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+}
+
+.footer-quote {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    margin-left: 20px;
+}
+
+.footer-quote blockquote {
+    font-style: italic;
+    font-size: 1.2em;
+    margin: 0 0 15px 0;
+    padding-left: 15px;
+    border-left: 3px solid #ff0000;
+}
+
+.quote-author {
+    text-align: right;
+    font-weight: bold;
+}
+
+.footer-bottom {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    text-align: center;
+    font-size: 0.9em;
 }
 
 #groupe-image {
@@ -109,11 +199,17 @@ footer a:hover {
 }
 
 #groupe-image img {
-    max-width: 30%; /*Ajustement de la largeur de l'image en fonction de la largeur de la div parent */
+    max-width: 40%; /*Ajustement de la largeur de l'image en fonction de la largeur de la div parent */
     height: auto; /* Maintien des proportions de l'image */
-    border: 1px solid #ccc; /* Ajout d'une bordure autour de l'image */
+    border: 2px solid #ff0000; /* Ajout d'une bordure rouge autour de l'image */
     border-radius: 10px; /* Ajout des coins arrondis à l'image */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Ajout d'une ombre à l'image */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); /* Ajout d'une ombre rouge à l'image */
+    transition: all 0.5s ease;
+}
+
+#groupe-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
 }
 
 p {
@@ -127,24 +223,30 @@ p {
 .media-galerie {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Espacement entre les images et vidéos */
+    gap: 25px; /* Espacement entre les images et vidéos */
     justify-content: center;
+    margin-top: 30px;
 }
 
 .media-galerie img,
 .media-galerie video {
     max-width: 100%; /* Ajustement de la largeur des médias en fonction de la largeur parente */
     height: auto; /* Maintient des proportions de l'image/vidéo */
-    border: 1px solid #ccc; /* Ajout d'une bordure autour des images/vidéos */
-    border-radius: 5px; /* Ajout des coins arrondis */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
+    border: 2px solid #ff0000; /* Bordure rouge */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease;
+    filter: grayscale(20%);
+    object-fit: cover;
 }
 
 .media-galerie img:hover,
 .media-galerie video:hover {
-    transform: scale(1.05);
+    transform: scale(1.05) rotate(1deg);
     border-color: #ff0000;
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+    filter: grayscale(0%);
+    z-index: 10;
 }
 
 /* Style pour les logos des réseaux sociaux */
@@ -171,10 +273,11 @@ p {
 form {
     max-width: 500px;
     margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: rgba(40, 40, 40, 0.9);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid #ff0000;
 }
 
 form label, form input, form textarea {
@@ -184,14 +287,24 @@ form label, form input, form textarea {
 
 form input, form textarea {
     width: 100%;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: rgba(20, 20, 20, 0.8);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #ff0000;
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
 }
 
 .text-form {
-    color: black;
+    color: white;
     font-family: 'RocknRoll One', sans-serif;
+    margin-bottom: 8px;
 }
 
 #gif {
@@ -216,15 +329,95 @@ img {
 .submit {
     background-color: #ff0000;
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border: none;
-    border-radius: 3px;
+    border-radius: 5px;
     cursor: pointer;
     font-family: 'RocknRoll One', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.submit:hover {
+    background-color: #cc0000;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 .submit a:hover {
     background-color: black;
+}
+
+/* Styles pour les nouvelles sections de la page d'accueil */
+.hero-section {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.tagline {
+    font-size: 1.2em;
+    margin-top: 20px;
+    font-style: italic;
+    color: #ccc;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+.welcome-section {
+    padding-top: 20px;
+}
+
+.intro-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.intro-text {
+    flex: 1;
+    min-width: 300px;
+    padding-right: 20px;
+}
+
+.gif-container {
+    text-align: center;
+    flex-basis: 250px;
+}
+
+.highlights-section {
+    margin-top: 40px;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.highlight-item {
+    background-color: rgba(50, 50, 50, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.highlight-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2);
+    border-color: #ff0000;
+}
+
+.highlight-item h3 {
+    margin-top: 0;
+    color: #ff0000;
 }
 
 /* Styles responsives */
