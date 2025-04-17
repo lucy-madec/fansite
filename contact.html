@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AC/DC - Fansite - Contact</title>
-    <link rel="icon" type="Image/png" href="symbole-acdc.png" />
-    <link rel="stylesheet" type="text/css" href="fansite.css">
+    <link rel="icon" type="Image/png" href="assets/images/symbole-acdc.png" />
+    <link rel="stylesheet" type="text/css" href="assets/css/fansite.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -33,10 +33,7 @@
     </header>
     <main>
         <section>
-            <h1>🤘Fansite de AC/DC🎸</h1>
-            <div id="groupe-image">
-                <img src="Groupe acdc.jpg" alt="Image du groupe AC/DC">
-            </div>
+            <h1>Contactez-nous</h1>
         </section>
 
         <section>
@@ -45,35 +42,89 @@
                 formulaire ci-dessous.</p>
         </section>
 
-        <section>
+        <section class="contact-section">
             <h3>Formulaire de Contact</h3>
-            <form action="confirmation.html" method="post">
-                <label for="nom" class="text-form">Nom :</label>
-                <input type="text" id="nom" name="nom">
-
-                <label for="email" class="text-form">E-mail :</label>
-                <input type="email" id="email" name="email">
-
-                <label for="message" class="text-form">Message :</label>
-                <textarea id="message" name="message" rows="4"></textarea>
-
-                <input type="submit" value="Envoyer" class="submit">
-            </form>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h4>Informations</h4>
+                    <p>Vous souhaitez nous contacter pour partager des informations, des photos ou simplement discuter d'AC/DC ? Utilisez le formulaire ci-contre ou contactez-nous via nos réseaux sociaux.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <h5>Email</h5>
+                            <p>fans@acdc-fansite.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <h5>Réseaux Sociaux</h5>
+                            <p>Retrouvez-nous sur <a href="reseaux_sociaux.html">nos réseaux sociaux</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form action="confirmation.html" method="post" class="contact-form">
+                    <div class="form-group">
+                        <label for="nom" class="text-form">Nom :</label>
+                        <input type="text" id="nom" name="nom" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="text-form">E-mail :</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="sujet" class="text-form">Sujet :</label>
+                        <select id="sujet" name="sujet" class="form-select">
+                            <option value="general">Question générale</option>
+                            <option value="suggestion">Suggestion</option>
+                            <option value="contribution">Contribution</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="text-form">Message :</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="checkbox-container text-form">
+                            <input type="checkbox" name="newsletter" id="newsletter">
+                            <span class="checkmark"></span>
+                            Je souhaite recevoir la newsletter
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="submit">Envoyer</button>
+                </form>
+            </div>
         </section>
     </main>
     <footer>
-        <nav>
-            <ul>
-                <li><a href="accueil.html">Accueil</a></li>
-                <li><a href="index.html">Actualités</a></li>
-                <li><a href="realisations.html">Réalisations</a></li>
-                <li><a href="evenements.html">Évènements</a></li>
-                <li><a href="photos_videos.html">Photos et Vidéos</a></li>
-                <li><a href="liens.html">Liens</a></li>
-                <li><a href="reseaux_sociaux.html">Réseaux Sociaux</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="footer-content">
+            <div class="footer-nav">
+                <h3>Navigation</h3>
+                <nav>
+                    <ul>
+                        <li><a href="accueil.html">Accueil</a></li>
+                        <li><a href="index.html">Actualités</a></li>
+                        <li><a href="realisations.html">Réalisations</a></li>
+                        <li><a href="evenements.html">Évènements</a></li>
+                        <li><a href="photos_videos.html">Photos et Vidéos</a></li>
+                        <li><a href="liens.html">Liens</a></li>
+                        <li><a href="reseaux_sociaux.html">Réseaux Sociaux</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-quote">
+                <blockquote>"Rock 'n' Roll ain't noise pollution, Rock 'n' Roll ain't gonna die!"</blockquote>
+                <p class="quote-author">- AC/DC</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Fansite AC/DC - Site non officiel créé par des fans, pour des fans.</p>
+        </div>
     </footer>
 </body>
 
